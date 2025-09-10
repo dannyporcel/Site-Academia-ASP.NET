@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ModeloAreaAluno.master.cs" Inherits="ModeloAreaAluno" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.css" rel="stylesheet" /> 
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="container-fluid bg-danger">
+        <nav class="navbar container-fluid" style="padding-bottom:15px; margin-bottom:15px">
+            <asp:Label ID="lblBemVindo" runat="server" Text="Olá" style="font-size:x-large"></asp:Label>            
+        </nav>
+    </header>
+    <form id="form1" runat="server">
+    <div class="row">
+        <div class="col-1"></div>
+
+        <div class="col-2">
+            <asp:Image ID="fotoAluno" runat="server"
+               AlternateText="Foto"
+               ImageAlign="left"               
+               CssClass="container border"
+              />
+            <asp:Button ID="trocarFoto" runat="server" Text="Trocar Foto" CssClass="form-control btn-danger" OnClick="trocarFoto_Click" />
+            <br />
+            <asp:Button ID="fisicoAluno" runat="server" Text="Histórico Físico" CssClass="form-control btn-danger" OnClick="fisicoAluno_Click"/>
+            <br />           
+            <asp:Button ID="alteraSenha" runat="server" Text="Altere Senha" CssClass="form-control btn-danger" OnClick="alteraSenha_Click"/>
+            <br />
+            <asp:Button ID="btnEditarDados" runat="server" Text="Editar dados" CssClass="form-control btn-danger" OnClick="btnEditarDados_Click1" />
+            <br />
+            <asp:Button ID="btnPlanos" runat="server" Text="Planos" CssClass="form-control btn-danger" OnClick="btnPlanos_Click1"/>
+            <br />
+            <asp:Button ID="btnVoltar" runat="server" Text="Voltar" CssClass="btn-danger" OnClick="btnVoltar_Click"/>
+            <asp:Button ID="btnSair" runat="server" Text="Sair" CssClass="btn-danger" OnClick="btnSair_Click"/>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+
+
+    <footer class="page-footer font-small blue fixed-bottom bg-danger">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 " style ="color:white">© 2018 Copyright: Be Mighty
+                       
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
+
+
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/esm/popper.min.js"></script>
+    <script src="Scripts/popper-utils.min.js"></script>
+    <script src="Scripts/esm/popper-utils.min.js"></script>
+
+    <script src="Scripts/bootstrap.min.js"></script>     
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
